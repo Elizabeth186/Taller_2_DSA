@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:orientation="vertical"
+    android:background="@drawable/fondo">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
+    <EditText
+        android:id="@+id/etxgmailsignin"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/container_edittext"
+        android:textColorHint="@color/gray"
+        android:hint="@string/gmail"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        />
+
+
+    <EditText
+        android:id="@+id/etxpasswordsingin"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        app:passwordToggleEnabled="true"
+        android:hint="@string/password"
+        android:background="@drawable/container_edittext"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        android:textColorHint="@color/gray"
+        />
+    <Button
+        android:id="@+id/btnsingup"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="@string/signin"
+        android:background="@drawable/container_btn"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/btnout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="left"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        android:textColor="@color/white"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        />
+
+</LinearLayout>

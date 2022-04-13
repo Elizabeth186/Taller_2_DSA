@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/fondo">
+
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Login"
+        android:textSize="40dp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/etxgmail"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:elegantTextHeight="true"
+        android:hint="@string/gmail"
+        android:textColorHint="@color/gray"
+        android:background="@drawable/container_edittext"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginBottom="25dp"
+        android:elevation="12dp"
+        />
+    <EditText
+        android:id="@+id/etxpassword"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        app:passwordToggleEnabled="true"
+        android:hint="@string/password"
+        android:background="@drawable/container_edittext"
+        android:textAlignment="center"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/white"
+        android:layout_marginBottom="25dp"
+        android:elevation="12dp"/>
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="@string/Login"
+        android:background="@drawable/container_btn"
+        android:textColor="@color/white"
+android:elevation="20dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newacount"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/newacount"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="@string/newacount2"
+            android:textColor="@color/orange"
+            android:textColorHint="@color/white"
+            android:background="@drawable/fondo"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

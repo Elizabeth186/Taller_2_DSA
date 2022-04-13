@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "987081369254",
+    "project_id": "bd-macizo-restaurant",
+    "storage_bucket": "bd-macizo-restaurant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987081369254:android:42af90c3b7e0c75ce27667",
+        "android_client_info": {
+          "package_name": "com.example.macizorestaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987081369254-u5tbsa36a6v4lqr92pbn2m1ula8tod2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDIzztgNogdRzOq2dpSR0WaFOS5G-OSCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987081369254-u5tbsa36a6v4lqr92pbn2m1ula8tod2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

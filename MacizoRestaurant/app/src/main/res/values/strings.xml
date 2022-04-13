@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Macizo Restaurant</string>
+    <!--Buttoms Name-->
+    <string name="name">FERRETERIA MI CASA</string>
+    <string name="Login">LOGIN</string>
+    <string name="signin">Sign In</string>
+    <string name="newacount">You do not have an account?</string>
+    <string name="newacount2"><b>Sing Up</b></string>
+    <string name="logout">Log Out</string>
+
+    <!--HINT EDITEXT-->
+    <string name="gmail">Email</string>
+    <string name="signup">SIGN UP</string>
+    <string name="password">Password</string>
+    <string name="tel">Phone</string>
+</resources>

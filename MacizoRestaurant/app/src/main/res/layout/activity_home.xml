@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:orientation="vertical"
+    android:background="@color/red">
+    <LinearLayout
+        android:id="@+id/layoutbelow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            />
+        <TextView
+            android:id="@+id/txtemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/layoutbelow"
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnlogout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/container_out_btn"
+            android:text="@string/logout"
+            android:textColor="@color/black" />
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            >
+
+            <Button
+                android:id="@+id/btnshop"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_baseline_shopping_cart_24"
+                android:textColor="@color/black" />
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/btnshop"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btnshop"
+                app:nbMaxTextLength="2"
+                />
+
+        </FrameLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutbody"
+        android:layout_below="@id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Menu"
+        android:padding="11dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/orange"
+        android:elevation="20dp"
+
+        />
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/layoutbody"
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</RelativeLayout>
