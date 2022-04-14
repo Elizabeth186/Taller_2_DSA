@@ -6,77 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".Home"
     android:orientation="vertical"
-    android:background="@color/red">
+    android:background="@color/white"
+    >
     <LinearLayout
-        android:id="@+id/layoutbelow"
+        android:id="@+id/init"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
+        android:layout_height="wrap_content"
+         android:gravity="center"
+        android:background="@color/green">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="User: "
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            />
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
         <TextView
             android:id="@+id/txtemail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            />
+            android:layout_marginLeft="9dp"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
     </LinearLayout>
-    <LinearLayout
-        android:layout_below="@id/layoutbelow"
-        android:id="@+id/layout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
+
+    <LinearLayout
+        android:layout_below="@id/init"
+        android:id="@+id/layoutbelow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            >
         <Button
             android:id="@+id/btnlogout"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/container_out_btn"
-            android:text="@string/logout"
+            android:background="@drawable/ic_baseline_exit_to_app_24"
             android:textColor="@color/black" />
-
-        <FrameLayout
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="250dp"
-            >
-
-            <Button
-                android:id="@+id/btnshop"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/ic_baseline_shopping_cart_24"
-                android:textColor="@color/black" />
-
-            <com.nex3z.notificationbadge.NotificationBadge
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignTop="@id/btnshop"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/btnshop"
-                app:nbMaxTextLength="2"
-                />
-
-        </FrameLayout>
-
     </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                >
+
+                <ImageView
+                    android:id="@+id/btnshop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@id/btnshop"
+                    android:layout_gravity="right"
+                    android:layout_toRightOf="@id/btnshop"
+                    app:nbMaxTextLength="2" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
     <LinearLayout
         android:id="@+id/layoutbody"
-        android:layout_below="@id/layout1"
+        android:layout_below="@id/layoutbelow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -95,11 +107,21 @@
         />
 
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@id/layoutbody"
-        android:id="@+id/recycler"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutbody">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutbody"
+            android:padding="20dp"
+            app:layoutManager="LinearLayoutManager" />
+
+    </ScrollView>
 
 
 

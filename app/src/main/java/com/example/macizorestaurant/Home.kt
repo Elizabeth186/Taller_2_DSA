@@ -38,12 +38,25 @@ class Home : AppCompatActivity(), MenuLoadListener {
 
         }
         init()
-        Loadfirebase()
+        LoadMenuFromfirebase()
+    }
+    //LOGIN
+    private fun chekuser() {
+        val firebaseUser = firebaseAuth.currentUser
+        if (firebaseUser!= null) {
+            val email = firebaseUser.email
+            binding.txtemail.text = email
+
+        } else {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+
     }
 //DATBASE REAL TIME
-    private fun Loadfirebase() {
+    private fun LoadMenuFromfirebase() {
 
-        val MenuModels: MutableList<MenuModel> = ArrayList()
+        val menuModels: MutableList<MenuModel> = ArrayList()
         FirebaseDatabase.getInstance()
             .getReference("Menu")
             .addListenerForSingleValueEvent(object : ValueEventListener{
@@ -53,9 +66,9 @@ class Home : AppCompatActivity(), MenuLoadListener {
                        for (menusnapshot in snapshot.children){
                            val menuModel = menusnapshot.getValue(MenuModel::class.java)
                            menuModel!!.key = menusnapshot.key
-                           MenuModels.add(menuModel)
+                           menuModels.add(menuModel)
                        }
-                       menuLoadListener.onMenuLoadSuccess(MenuModels)
+                       menuLoadListener.onMenuLoadSuccess(menuModels)
                    }else{
                        menuLoadListener.onMenuLoadFailed("Product no exist")
                    }
@@ -72,29 +85,17 @@ class Home : AppCompatActivity(), MenuLoadListener {
         menuLoadListener = this
 
         val gridLayoutManager = GridLayoutManager(this, 2)
-        recycler.layoutManager = gridLayoutManager
-        recycler.addItemDecoration(SpaceItemDecoration())
+        recycler_menu.layoutManager = gridLayoutManager
+        recycler_menu.addItemDecoration(SpaceItemDecoration())
     }
 
-    //LOGIN
-    private fun chekuser() {
-        val firebaseUser = firebaseAuth.currentUser
-        if (firebaseUser!= null) {
-            val email = firebaseUser.email
-            binding.txtemail.text = email
 
-        } else {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }
-
-    }
 
     //METODS DATA BASE REAL TIME
 
     override fun onMenuLoadSuccess(menuModelList: List<MenuModel>?) {
 val adapter = MyMenuAdapter(this, menuModelList!!)
-        recycler.adapter = adapter
+        recycler_menu.adapter = adapter
     }
 
     override fun onMenuLoadFailed(message: String?) {

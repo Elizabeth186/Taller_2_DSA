@@ -10,7 +10,7 @@ class SpaceItemDecoration: RecyclerView.ItemDecoration() {
         parent: RecyclerView,
         state: RecyclerView.State
     ) {
-        if (parent.getChildLayoutPosition(view) % 2 !=0)
+        if (parent.getChildLayoutPosition(view) % 1 !=0)
         {
           outRect.top = 50
             outRect.bottom = -50

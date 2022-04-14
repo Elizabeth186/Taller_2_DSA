@@ -16,14 +16,14 @@ class MyMenuAdapter( private  val context: Context, private val list: List<MenuM
     RecyclerView.Adapter<MyMenuAdapter.MyMenuViewHolder>() {
 
     class MyMenuViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-       var image:ImageView?=null
+       var imageview:ImageView?=null
       var  txtname: TextView?=null
        var txtprice: TextView?=null
 
       init {
-          image = itemView.findViewById(R.id.image) as ImageView
-          txtname = itemView.findViewById(R.id.txtname) as TextView
-          txtprice = itemView.findViewById(R.id.txtprice) as TextView
+          imageview = itemView.findViewById(R.id.imageview) as ImageView;
+          txtname = itemView.findViewById(R.id.txtname) as TextView;
+          txtprice = itemView.findViewById(R.id.txtprice) as TextView;
       }
     }
 
@@ -35,11 +35,12 @@ class MyMenuAdapter( private  val context: Context, private val list: List<MenuM
     override fun onBindViewHolder(holder: MyMenuViewHolder, position: Int) {
        Glide.with(context)
            .load(list[position].image)
+           .into(holder.imageview!!)
         holder.txtname!!.text = StringBuilder().append(list[position].name)
         holder.txtprice!!.text = StringBuilder("$ ").append(list[position].price)
     }
 
     override fun getItemCount(): Int {
-        return list.size
+        return list.size;
     }
 }
