@@ -3,7 +3,7 @@
 
 It is a Mexican food application, created in Android studio, with a connection to the firebase database.
 
-#### Sobre la app
+#### About the app
  Logo:
  
 ![logo](https://user-images.githubusercontent.com/89174310/163696168-eea5d93e-bdc6-48c3-b029-4dc69c9bf357.png)
