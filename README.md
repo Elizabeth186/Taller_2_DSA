@@ -18,7 +18,7 @@ It is a Mexican food application, created in Android studio, with a connection t
 
 [firebase-DATA_BASE_REALTIME] https://firebase.google.com/?hl=es-419
 
-Json Utilizado: 
+Json Utilizado: https://raw.githubusercontent.com/Elizabeth186/Taller_2_DSA/main/menu.json
 
 ## Collaborators
 
