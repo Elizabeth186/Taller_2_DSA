@@ -20,6 +20,11 @@ It is a Mexican food application, created in Android studio, with a connection t
 
 Json Utilizado: https://raw.githubusercontent.com/Elizabeth186/Taller_2_DSA/main/menu.json
 
+## Links
+
+Mock Ups: https://app.moqups.com/bpmp7PGLcYaErL0zqWZvKDUH3S3eXxMl/view/page/aa9df7b72
+
+
 ## Collaborators
 
  Andrea Elizabeth Blanco Suarez  BS200382
