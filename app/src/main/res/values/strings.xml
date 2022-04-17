@@ -7,10 +7,18 @@
     <string name="newacount">You do not have an account?</string>
     <string name="newacount2"><b>Sing Up</b></string>
     <string name="logout">Log Out</string>
+    <string name="payment">Pay</string>
 
     <!--HINT EDITEXT-->
     <string name="gmail">Email</string>
     <string name="signup">SIGN UP</string>
     <string name="password">Password</string>
     <string name="tel">Phone</string>
+    <string name="nameexaple">Name</string>
+    <string name="cant">1</string>
+    <string name="price">$1</string>
+    <string name="cart">Cart</string>
+    <string name="history">History</string>
+
+
 </resources>

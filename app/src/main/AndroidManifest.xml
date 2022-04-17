@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.macizorestaurant" >
+    package="com.example.macizorestaurant">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,14 +10,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar" >
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".History"
+            android:exported="false" />
         <activity
             android:name=".CartActivity"
             android:exported="true" />
         <activity
             android:name=".SplashScreen"
             android:exported="true"
-            android:theme="@style/splashtheme" >
+            android:theme="@style/splashtheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

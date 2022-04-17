@@ -64,6 +64,12 @@ class Home : AppCompatActivity(), MenuLoadListener, CartloadListener {
 
 
         }
+
+        binding.btnlhistory.setOnClickListener {
+
+            startActivity(Intent(this, History::class.java))
+            finish()
+        }
         init()
         LoadMenuFromfirebase()
         countCartFromFirebase()

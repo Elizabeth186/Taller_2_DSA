@@ -64,10 +64,10 @@ class MyCartAdapter (
         holder.btnPlus!!.setOnClickListener{_ -> plusCartItem(holder, cartModelList[position])}
         holder.btnDelete!!.setOnClickListener {_ ->
             val dialog = AlertDialog.Builder(context)
-                .setTitle("Eliminar item")
-                .setMessage("Quieres eliminar este item?")
-                .setNegativeButton("CANCELAR") {dialog,_ -> dialog.dismiss()}
-                .setPositiveButton("ELIMINAR"){dialog,_ ->
+                .setTitle(" Delete item")
+                .setMessage("you want to delete this item?")
+                .setNegativeButton("CANCEL") {dialog,_ -> dialog.dismiss()}
+                .setPositiveButton("DELETE"){dialog,_ ->
 
                     notifyItemRemoved(position)
                     FirebaseDatabase.getInstance()
