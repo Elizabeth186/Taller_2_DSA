@@ -1,5 +1,5 @@
-# NAME
-<h1> Macizo Restaurant </h1>
+
+# Macizo Restaurant 
 
 It is a Mexican food application, created in Android studio, with a connection to the firebase database.
 
@@ -26,6 +26,14 @@ Json Utilizado: https://raw.githubusercontent.com/Elizabeth186/Taller_2_DSA/main
 
  Byron Roberto Sanchez Carrillo  
  
+ ## License:
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)
+
+##### Which sets:
+Attribution: You must give proper credit, provide a link to the license, and indicate if any changes were made.
+  
+Non-Commercial: You may not use the material for commercial purposes.
 
 
 
