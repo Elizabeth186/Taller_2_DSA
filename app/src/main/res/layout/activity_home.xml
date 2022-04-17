@@ -74,6 +74,7 @@
                     android:src="@drawable/ic_baseline_shopping_cart_24" />
 
                 <com.nex3z.notificationbadge.NotificationBadge
+                    android:id="@+id/ntbadge"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_alignTop="@id/btnshop"
@@ -111,7 +112,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/layoutbody">
+        android:layout_below="@id/layoutbody"
+        android:background= "@drawable/fondo">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_menu"
@@ -119,7 +121,8 @@
             android:layout_height="match_parent"
             android:layout_below="@id/layoutbody"
             android:padding="20dp"
-            app:layoutManager="LinearLayoutManager" />
+            app:layoutManager="LinearLayoutManager"
+            />
 
     </ScrollView>
 
